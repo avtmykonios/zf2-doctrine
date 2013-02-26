@@ -35,7 +35,7 @@ Acrescentar as depencencias referentes ao doctrine no arquivo:
 "doctrine/migrations": "dev-master"
 ```
 
-Desta forma, o arquivo, ficará da seguinte forma:
+Desta forma, o arquivo, ficará da seguinte maneira:
 
 ```
 {
@@ -112,11 +112,10 @@ INSERT INTO `products` (`id`, `name`, `description`) VALUES
 
 ### Configurando o projeto
 
-#### Configuração do banco de dados
+#### config/autoload/local.php
 
-```
+```php
 <?php
-// config/autoload/local.php
 return array(
     'doctrine' => array(
         'connection' => array(
@@ -137,7 +136,7 @@ return array(
 
 #### Adicionando o módulo nas configurações da aplicação
 
-```
+```php
 <?php
 // config/application.config.php
 return array(
@@ -180,7 +179,7 @@ mkdir -p Stock/view/stock/product
 ```
 
 #### Stock/Module.php
-```
+```php
 <?php
 namespace Stock;
 
@@ -210,7 +209,7 @@ class Module
 
 #### Stock/config/module.config.php
 
-```
+```php
 <?php
 namespace Stock;
 
@@ -241,7 +240,7 @@ return array(
                 ),
             ),
         ),
-    ),    
+    ),
 
     // View setup for this module
     'view_manager' => array(
@@ -270,13 +269,13 @@ return array(
 ```
 
 #### Stock/autoload_classmap.php
-```
+```php
 <?php
 return array();
 ```
 
 #### Stock/src/Stock/Entity/Product.php
-```
+```php
 <?php
 /**
  * Tutorial of Zend Framework 2 and Doctrine
@@ -439,7 +438,7 @@ class Product implements InputFilterAwareInterface
 ```
 
 #### Stock/src/Stock/Form/ProductForm.php
-```
+```php
 <?php
 namespace Stock\Form;
 
@@ -493,7 +492,7 @@ class ProductForm extends Form
 ```
 
 #### Stock/src/Stock/Controller/ProductController.php
-```
+```php
 <?php
 
 namespace Stock\Controller;
@@ -634,7 +633,7 @@ class ProductController extends AbstractActionController
 }
 ```
 #### Stock/view/stock/product/index.phtml
-```
+```php
 <?php
 $title = 'Products';
 $this->headTitle($title);
@@ -666,7 +665,7 @@ $this->headTitle($title);
 ```
 
 #### Stock/view/stock/product/add.phtml
-```
+```php
 <?php
 $title = 'Add new product';
 $this->headTitle($title);
@@ -688,7 +687,7 @@ echo $this->form()->closeTag();
 ```
 
 #### Stock/view/stock/product/edit.phtml
-```
+```php
 <?php
 $title = 'Edit product';
 $this->headTitle($title);
@@ -715,7 +714,7 @@ echo $this->form()->closeTag();
 ```
 
 #### Stock/view/stock/product/delete.phtml
-```
+```php
 <?php
 $title = 'Delete product';
 $this->headTitle($title);
