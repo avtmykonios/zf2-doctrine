@@ -1,4 +1,6 @@
-zf2-doctrine
+Zend Framework 2 e Doctrine ORM
 ============
 
-Use example of Zend Framework 2 and Doctrine ORM.
+### Descrição
+
+Este projeto contém um exemplo prático da utilização do Zend Framework 2 com o ORM Doctrine.
