@@ -3,7 +3,7 @@ Zend Framework 2 e Doctrine ORM
 
 ### Descrição
 
-Este projeto contém um exemplo prático da utilização do [Zend Framework 2](http://framework.zend.com/) com o ORM [Doctrine](http://www.doctrine-project.org/). Trata-se da implementação de um [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) simples de produtos, cuja finalidade é demonstrar a integração entre o ZF2 e Doctrine.
+Este projeto contém um exemplo prático da utilização do [Zend Framework 2](http://framework.zend.com/manual/2.0/en/index.html) com o ORM [Doctrine](http://www.doctrine-project.org/). Trata-se da implementação de um [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) simples de produtos, cuja finalidade é demonstrar a integração entre o ZF2 e Doctrine.
 
 A configuração da máquina utilizada para realização deste tutorial foi:
 
