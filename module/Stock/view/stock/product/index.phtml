@@ -1,0 +1,30 @@
+<?php
+// module/product/view/product/product/index.phtml:
+
+$title = 'Products';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+    <a href="<?php echo $this->url('product', array('action'=>'add'));?>">Add new</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($products as $product) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($product->name);?></td>
+    <td><?php echo $this->escapeHtml($product->description);?></td>
+    <td>
+        <a href="<?php echo $this->url('product',
+            array('action'=>'edit', 'id' => $product->id));?>">Edit</a>
+        <a href="<?php echo $this->url('product',
+            array('action'=>'delete', 'id' => $product->id));?>">Delete</a>
+    </td>
+</tr>
+<?php endforeach; ?>
+</table>
