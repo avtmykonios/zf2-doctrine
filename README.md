@@ -1,7 +1,7 @@
 Zend Framework 2 e Doctrine ORM
 ============
 
-### Descrição
+###Descrição
 
 Este projeto contém um exemplo prático da utilização do [Zend Framework 2](http://framework.zend.com/manual/2.0/en/index.html) com o ORM [Doctrine](http://www.doctrine-project.org/). Trata-se da implementação de um [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) simples de produtos, cuja finalidade é demonstrar a integração entre o ZF2 e Doctrine.
 
@@ -13,7 +13,7 @@ A configuração da máquina utilizada para realização deste tutorial foi:
 * PHP 5.4.6
 * Git 1.7.10.4
 
-### Preparação do ambiente
+## Preparação do ambiente
 
 #### Obtendo o Zend Framework 2
 
@@ -24,7 +24,7 @@ cd /var/www
 git clone git@github.com:zendframework/ZendSkeletonApplication.git zf2-doctrine
 ```
 
-#### Instalando dependências
+## Instalando dependências
 
 ##### composer.json
 
@@ -62,7 +62,7 @@ Após efetuar as alterações no arquivo composer.json, basta executar o comando
 php composer.phar self-update && php composer.phar install
 ```
 
-#### VirtualHost
+## VirtualHost
 
 ```
 <VirtualHost *:80>
@@ -82,13 +82,13 @@ php composer.phar self-update && php composer.phar install
 </VirtualHost>
 ```
 
-#### Hosts
+## Hosts
 
 ```
 echo "127.0.0.1 zf2-doctrine.local" >> /etc/hosts
 ```
 
-#### Script para geração da base de dados
+## Database (script para geração da base de dados)
 
 ```
 DROP DATABASE IF EXISTS zf2;
@@ -110,7 +110,7 @@ INSERT INTO `products` (`id`, `name`, `description`) VALUES
 (3, 'Chocolate Crunch', 'Chocolate ao leite NESTLÉ com flocos de arroz. O chocolate do barulho que todo mundo adora agora em versão 35g!');
 ```
 
-### Configurando o projeto
+## Configurando o projeto
 
 #### config/autoload/local.php
 
@@ -152,7 +152,7 @@ return array(
     .
 ```
 
-### Criação do Módulo
+## Criação do Módulo
 
 Iremos criar um módulo do Zend Framework 2 para que possamos utilizar o Doctrine, portanto, dentro do diretório *zf2-doctrine/module* do projeto, devemos criar a seguinte estrutura de diretório:
 
@@ -178,7 +178,7 @@ mkdir -p Stock/src/Stock/Form
 mkdir -p Stock/view/stock/product
 ```
 
-#### Stock/Module.php
+## Stock/Module.php
 ```php
 <?php
 namespace Stock;
@@ -207,7 +207,7 @@ class Module
 }
 ```
 
-#### Stock/config/module.config.php
+## Stock/config/module.config.php
 
 ```php
 <?php
@@ -268,13 +268,13 @@ return array(
 );
 ```
 
-#### Stock/autoload_classmap.php
+## Stock/autoload_classmap.php
 ```php
 <?php
 return array();
 ```
 
-#### Stock/src/Stock/Entity/Product.php
+## Stock/src/Stock/Entity/Product.php
 ```php
 <?php
 /**
@@ -437,7 +437,7 @@ class Product implements InputFilterAwareInterface
 }
 ```
 
-#### Stock/src/Stock/Form/ProductForm.php
+## Stock/src/Stock/Form/ProductForm.php
 ```php
 <?php
 namespace Stock\Form;
@@ -491,7 +491,7 @@ class ProductForm extends Form
 }
 ```
 
-#### Stock/src/Stock/Controller/ProductController.php
+## Stock/src/Stock/Controller/ProductController.php
 ```php
 <?php
 
@@ -632,7 +632,7 @@ class ProductController extends AbstractActionController
     }
 }
 ```
-#### Stock/view/stock/product/index.phtml
+## Stock/view/stock/product/index.phtml
 ```php
 <?php
 $title = 'Products';
@@ -664,7 +664,7 @@ $this->headTitle($title);
 </table>
 ```
 
-#### Stock/view/stock/product/add.phtml
+## Stock/view/stock/product/add.phtml
 ```php
 <?php
 $title = 'Add new product';
@@ -686,7 +686,7 @@ echo $this->formSubmit($form->get('submit'));
 echo $this->form()->closeTag();
 ```
 
-#### Stock/view/stock/product/edit.phtml
+## Stock/view/stock/product/edit.phtml
 ```php
 <?php
 $title = 'Edit product';
@@ -713,7 +713,7 @@ echo $this->formSubmit($form->get('submit'));
 echo $this->form()->closeTag();
 ```
 
-#### Stock/view/stock/product/delete.phtml
+## Stock/view/stock/product/delete.phtml
 ```php
 <?php
 $title = 'Delete product';
