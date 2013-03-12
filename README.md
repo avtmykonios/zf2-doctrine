@@ -31,7 +31,7 @@ git clone git@github.com:zendframework/ZendSkeletonApplication.git zf2-doctrine
 Acrescentar as depencencias referentes ao doctrine no arquivo:
 
 ```
-"doctrine/doctrine-orm-module": "~0.7.0",
+"doctrine/doctrine-orm-module": "dev-master",
 "doctrine/migrations": "dev-master"
 ```
 
@@ -50,7 +50,7 @@ Desta forma, o arquivo, ficará da seguinte maneira:
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*",
-        "doctrine/doctrine-orm-module": "~0.7.0",
+        "doctrine/doctrine-orm-module": dev-master",
         "doctrine/migrations": "dev-master"
     }
 }
