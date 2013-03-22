@@ -50,7 +50,7 @@ Desta forma, o arquivo, ficará da seguinte maneira:
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*",
-        "doctrine/doctrine-orm-module": dev-master",
+        "doctrine/doctrine-orm-module": "dev-master",
         "doctrine/migrations": "dev-master"
     }
 }
@@ -127,6 +127,7 @@ return array(
                     'user'     => 'root',
                     'password' => 'root',
                     'dbname'   => 'zf2',
+                    'charset'  => 'UTF8',
                 ),
             ),
         ),
