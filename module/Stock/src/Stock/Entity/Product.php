@@ -19,9 +19,6 @@ use Zend\InputFilter\InputFilterInterface;
  *
  * @ORM\Entity
  * @ORM\Table(name="products")
- * @property int $id
- * @property string $name
- * @property string $description
  */
 class Product implements InputFilterAwareInterface 
 {
